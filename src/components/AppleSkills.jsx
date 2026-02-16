@@ -3,19 +3,41 @@ import { motion } from 'framer-motion';
 const skillCategories = [
     {
         title: 'Frontend',
-        skills: ['React', 'TypeScript', 'Tailwind CSS', 'JavaScript', 'HTML5', 'CSS3'],
+        skills: [
+            { name: 'React', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg' },
+            { name: 'TypeScript', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg' },
+            { name: 'Tailwind CSS', icon: 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg' },
+            { name: 'JavaScript', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg' },
+            { name: 'HTML5', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg' },
+            { name: 'CSS3', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg' },
+        ],
     },
     {
         title: 'Backend',
-        skills: ['Node.js', 'Express.js', 'MySQL', 'PostgreSQL'],
+        skills: [
+            { name: 'Node.js', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg' },
+            { name: 'Express.js', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg' },
+            { name: 'MySQL', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg' },
+            { name: 'PostgreSQL', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg' },
+            { name: 'SQL', icon: 'https://cdn-icons-png.flaticon.com/512/4492/4492311.png' },
+        ],
     },
     {
         title: 'Tools',
-        skills: ['Playwright', 'Git', 'Figma', 'Jira'],
+        skills: [
+            { name: 'Playwright', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/playwright/playwright-original.svg' },
+            { name: 'Git', icon: 'https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg' },
+            { name: 'Figma', icon: 'https://www.vectorlogo.zone/logos/figma/figma-icon.svg' },
+            { name: 'Jira', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/jira/jira-original.svg' },
+        ],
     },
     {
         title: 'Other',
-        skills: ['Python', 'IoT', 'VHDL'],
+        skills: [
+            { name: 'Python', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg' },
+            { name: 'IoT', icon: 'https://cdn-icons-png.flaticon.com/512/2282/2282188.png' },
+            { name: 'VHDL', icon: 'https://cdn-icons-png.flaticon.com/512/4248/4248443.png' },
+        ],
     },
 ];
 
@@ -39,7 +61,7 @@ const AppleSkills = () => {
                     </h2>
                 </motion.div>
 
-                {/* Skills Grid - Minimal Luxury */}
+                {/* Skills Grid - Minimal Luxury with Icons */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-300">
                     {skillCategories.map((category, idx) => (
                         <motion.div
@@ -53,13 +75,20 @@ const AppleSkills = () => {
                             <h3 className="text-xs font-medium tracking-[0.2em] uppercase text-gray-900 mb-6 border-b border-gray-200 pb-4">
                                 {category.title}
                             </h3>
-                            <ul className="space-y-3">
+                            <ul className="space-y-4">
                                 {category.skills.map((skill) => (
                                     <li
-                                        key={skill}
-                                        className="text-sm font-light text-gray-600 tracking-wide"
+                                        key={skill.name}
+                                        className="flex items-center gap-3 group"
                                     >
-                                        {skill}
+                                        <img
+                                            src={skill.icon}
+                                            alt={skill.name}
+                                            className="w-5 h-5 object-contain group-hover:scale-110 transition-all duration-300"
+                                        />
+                                        <span className="text-sm font-light text-gray-600 tracking-wide">
+                                            {skill.name}
+                                        </span>
                                     </li>
                                 ))}
                             </ul>

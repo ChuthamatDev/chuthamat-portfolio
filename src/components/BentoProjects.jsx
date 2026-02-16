@@ -9,7 +9,7 @@ const projects = [
         year: '2024',
         tags: ['React', 'Node.js', 'IoT', 'AI'],
         image: '/image/imageWebApp.png',
-        link: 'https://github.com/Toppuwittaya/Fontend-energy',
+        link: 'https://drive.google.com/file/d/1_ww3Pk6KJr8IXapNCEwXAEgd4WeDNJUI/view?usp=sharing',
     },
     {
         id: 2,
@@ -81,9 +81,9 @@ const BentoProjects = () => {
                                 <img
                                     src={projects[0].image}
                                     alt={projects[0].title}
-                                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                                 />
-                                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-all duration-700" />
+                                <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-transparent group-hover:from-black/20 transition-all duration-700" />
                             </div>
 
                             {/* Content Overlay */}
@@ -144,9 +144,9 @@ const BentoProjects = () => {
                                     <img
                                         src={project.image}
                                         alt={project.title}
-                                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                                     />
-                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-all duration-700" />
+                                    <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-transparent group-hover:from-black/20 transition-all duration-700" />
                                 </div>
 
                                 {/* Content Overlay */}
