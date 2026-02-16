@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Container from './common/Container';
 
 function Navbar() {
     const [activeLink, setActiveLink] = useState('home');
@@ -33,36 +34,38 @@ function Navbar() {
 
     return (
         <div className="navbar">
-            <div className="navbar__brand">
-                <span>My Portfolio</span>
-            </div>
+            <Container className="flex items-center justify-between h-full">
+                <div className="navbar__brand">
+                    <span>My Portfolio</span>
+                </div>
 
-            <input type="checkbox" name="" id="check" />
-            <label htmlFor="check" className="icons">
-                <i className="bx bx-menu" id="menu-icon"></i>
-                <i className="bx bx-x" id="close-icon"></i>
-            </label>
+                <input type="checkbox" name="" id="check" />
+                <label htmlFor="check" className="icons">
+                    <i className="bx bx-menu" id="menu-icon"></i>
+                    <i className="bx bx-x" id="close-icon"></i>
+                </label>
 
-            <nav className="navbar__menu">
-                <ul className="navbar__list">
-                    {['home', 'about', 'projects', 'experience', 'skills'].map((id, index) => (
-                        <li key={id}>
-                            <a
-                                style={{ "--i": index }}
-                                href={`#${id}`}
-                                className={`navbar__link ${activeLink === id ? 'active' : ''}`}
-                                onClick={() => {
-                                    // Uncheck the checkbox when a link is clicked (for mobile menu)
-                                    document.getElementById('check').checked = false;
-                                    setActiveLink(id);
-                                }}
-                            >
-                                {id.charAt(0).toUpperCase() + id.slice(1)}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
+                <nav className="navbar__menu">
+                    <ul className="navbar__list">
+                        {['home', 'about', 'projects', 'experience', 'skills'].map((id, index) => (
+                            <li key={id}>
+                                <a
+                                    style={{ "--i": index }}
+                                    href={`#${id}`}
+                                    className={`navbar__link ${activeLink === id ? 'active' : ''}`}
+                                    onClick={() => {
+                                        // Uncheck the checkbox when a link is clicked (for mobile menu)
+                                        document.getElementById('check').checked = false;
+                                        setActiveLink(id);
+                                    }}
+                                >
+                                    {id.charAt(0).toUpperCase() + id.slice(1)}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            </Container>
         </div>
     );
 }

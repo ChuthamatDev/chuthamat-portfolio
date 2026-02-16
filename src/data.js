@@ -1,5 +1,32 @@
 export const projectsData = [
   {
+    title: "SSK Ubon Microtech",
+    description: "Corporate management system for Ubon Microtech.",
+    image: "/image/ssk.png", 
+    tags: ["React", "Management System", "Enterprise"],
+    links: {
+      site: "https://ssk.ubonmicrotech.com/login",
+    }
+  },
+  {
+    title: "Task Board App",
+    description: "A Kanban-style task management application for organizing workflows.",
+    image: "/image/kanban.png", 
+    tags: ["React", "Vercel", "Kanban"],
+    links: {
+      site: "https://task-board-react-ivory.vercel.app/login",
+    }
+  },
+  {
+    title: "Todo List App",
+    description: "A simple and efficient todo list application to track daily tasks.",
+    image: "/image/todolist.png", 
+    tags: ["React", "Vercel", "Productivity"],
+    links: {
+      site: "https://todo-list-react-liart-three.vercel.app",
+    }
+  },
+  {
     title: "Smart Building Energy Monitor",
     description: "ระบบแสดงผล วิเคราะห์ และควบคุมพลังงานในอาคารอัจฉริยะ ด้วย IoT และ AI",
     image: "/image/imageWebApp.png",
@@ -25,35 +52,48 @@ export const projectsData = [
     links: {
       github: "https://github.com/phraewchuthamat",
     }
-  },
-  {
-    title: "Minimal-Landding-Page",
-    description: "ฝึกวางโครงสร้างเว็บ และฝึกตัดเว็บจาก Figma",
-    image: "/image/minimal-landingpage.png",
-    tags: ["HTML", "CSS", "Figma"],
-    links: {
-      github: "https://github.com/phraewchuthamat/Minimal-LanddingPage",
-    }
-  },
-  {
-    title: "Ladding-Page",
-    description: "ฝึกเขียน Ladding-Page",
-    image: "/image/image.png",
-    tags: ["HTML", "CSS", "Figma"],
-    links: {
-      github: "https://github.com/phraewchuthamat/test-html",
-    }
   }
 ];
 
 export const skillsData = [
-  { name: "JavaScript", icon: "fab fa-js-square", color:"#f7df1e", exp: "1+ year" },
-  { name: "HTML", icon: "fab fa-html5", color: "#e34f26", exp: "1+ year" },
-  { name: "CSS", icon: "fab fa-css3-alt", color: "#2965f1", exp: "1+ year" },
-  { name: "React", icon: "fab fa-react", color: "#61dafb", exp: "1+ year" },
-  { name: "Git", icon: "fab fa-git-alt", color: "#f1502f", exp: "6 months" },
-  { name: "GitHub", icon: "fab fa-github", color: "", exp: "6 months" },
-  { name: "Postman", image: "https://cdn.worldvectorlogo.com/logos/postman.svg", exp: "6 months" },
-  { name: "Figma", icon: "fa-brands fa-figma", color: "#a259ff", exp: "6 months" },
-  { name: "MUI", image: "https://raw.githubusercontent.com/mui/material-ui/master/docs/public/static/logo.png", exp: "6 months" }
+  {
+    category: "Frontend Development",
+    items: [
+      { name: "HTML5", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" },
+      { name: "CSS3", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" },
+      { name: "JavaScript", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" },
+      { name: "TypeScript", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" },
+      { name: "React", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" },
+      { name: "Tailwind CSS", image: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" },
+      { name: "Material-UI", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/materialui/materialui-original.svg" }
+    ]
+  },
+  {
+    category: "Backend & Database",
+    items: [
+      { name: "Node.js", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" },
+      { name: "Express.js", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" },
+      { name: "MySQL", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" },
+      { name: "PostgreSQL", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" }
+    ]
+  },
+  {
+    category: "Testing & Workflow",
+    items: [
+      { name: "Playwright", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/playwright/playwright-original.svg" },
+      { name: "Git", image: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" },
+      { name: "Jira", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jira/jira-original.svg" },
+      { name: "Trello", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/trello/trello-original.svg" },
+      { name: "Bitbucket", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bitbucket/bitbucket-original.svg" },
+      { name: "Jenkins", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-original.svg" },
+      { name: "Figma", image: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg" }
+    ]
+  },
+  {
+    category: "Embedded & Hardware",
+    items: [
+      { name: "Python", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" },
+      { name: "VHDL", image: "https://img.shields.io/badge/VHDL-0540F2?style=for-the-badge&logoColor=white" }
+    ]
+  }
 ];

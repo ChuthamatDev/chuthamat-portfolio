@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Container from './common/Container';
 
 function Contact() {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -19,7 +20,7 @@ function Contact() {
 
     return (
         <section id="contact">
-            <div className="contact-container">
+            <Container className="contact-container">
                 <div className="content-contact">
                     <h1>Get In Touch</h1>
                     <p>Feel free to reach out for collaborations or inquiries.</p>
@@ -69,7 +70,7 @@ function Contact() {
                         </div>
                     </form>
                 </div>
-            </div>
+            </Container>
         </section>
     );
 }

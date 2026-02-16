@@ -1,7 +1,9 @@
+import Container from './common/Container';
+
 function About() {
     return (
         <section id="about" className="section-about" data-aos="fade-up">
-            <div className="container">
+            <Container>
                 <div className="row">
                     <div className="col-lg-8 mx-auto text-center">
                         <h2 className="section-title">About Me</h2>
@@ -22,7 +24,7 @@ function About() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </Container>
         </section>
     );
 }
