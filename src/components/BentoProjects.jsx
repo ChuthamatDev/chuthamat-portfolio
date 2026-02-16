@@ -4,6 +4,15 @@ import { ArrowUpRight } from 'lucide-react';
 const projects = [
     {
         id: 1,
+        title: 'Kumwell SLMS',
+        category: 'Enterprise System',
+        year: '2024',
+        tags: ['React', 'JavaScript', 'Mui', 'Chart.js'],
+        image: '/image/LoginPage __ Forgot password.png',
+        link: '#',
+    },
+    {
+        id: 2,
         title: 'Smart Building Energy Monitor',
         category: 'IoT & AI Platform',
         year: '2024',
@@ -12,7 +21,7 @@ const projects = [
         link: 'https://drive.google.com/file/d/1_ww3Pk6KJr8IXapNCEwXAEgd4WeDNJUI/view?usp=sharing',
     },
     {
-        id: 2,
+        id: 3,
         title: 'SSK Ubon Microtech',
         category: 'Enterprise System',
         year: '2024',
@@ -21,7 +30,7 @@ const projects = [
         link: 'https://ssk.ubonmicrotech.com/login',
     },
     {
-        id: 3,
+        id: 4,
         title: 'Task Board',
         category: 'Productivity Tool',
         year: '2024',
@@ -30,7 +39,7 @@ const projects = [
         link: 'https://task-board-react-ivory.vercel.app/login',
     },
     {
-        id: 4,
+        id: 5,
         title: 'Todo List',
         category: 'Web Application',
         year: '2024',

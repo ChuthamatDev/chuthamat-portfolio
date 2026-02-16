@@ -86,7 +86,7 @@ const AppleHero = () => {
                     className="grid grid-cols-3 gap-12 max-w-2xl mx-auto"
                 >
                     {[
-                        { value: '10+', label: 'Projects' },
+                        { value: '5', label: 'Projects' },
                         { value: '15+', label: 'Technologies' },
                         { value: '1Y+', label: 'Experience' },
                     ].map((stat, idx) => (
