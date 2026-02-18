@@ -11,11 +11,9 @@ function Contact() {
     const handleSubmit = (e) => {
         if (!formData.name || !formData.email || !formData.message) {
             e.preventDefault();
-            alert("⚠️ กรุณากรอกข้อมูลให้ครบก่อนส่ง");
+            alert("Please fill in all fields before submitting");
             return;
         }
-        // FormSpree handles the rest (redirect)
-        // alert("✅ ส่งข้อความสำเร็จ!"); 
     };
 
     return (

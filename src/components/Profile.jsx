@@ -6,7 +6,6 @@ function Profile() {
       <Container>
         <div className="profile-wrapper">
           <div className="intro">
-            {/* Image removed as requested */}
             <div className="info">
               <h1>Chuthamat Buaban</h1>
               <h3 className="job-title">Frontend Developer</h3>

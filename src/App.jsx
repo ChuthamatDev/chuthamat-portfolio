@@ -51,7 +51,7 @@ function App() {
                     </div>
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-xs text-white/40 font-light">
-                            © 2024 Chuthamat Buaban. All rights reserved.
+                            © 2026 Chuthamat Buaban. All rights reserved.
                         </p>
                         <p className="text-xs text-white/40 font-light tracking-wider">
                             Designed & Developed with precision

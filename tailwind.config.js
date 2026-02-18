@@ -17,6 +17,7 @@ export default {
                     'system-ui',
                     'sans-serif',
                 ],
+                pixelify: ['Pixelify Sans', 'sans-serif'],
             },
             borderRadius: {
                 apple: '18px',

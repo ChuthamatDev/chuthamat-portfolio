@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion } from "motion/react"
 
 const skillCategories = [
     {
@@ -50,10 +50,6 @@ const skillCategories = [
                 icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg',
             },
             {
-                name: 'PostgreSQL',
-                icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg',
-            },
-            {
                 name: 'SQL',
                 icon: 'https://cdn-icons-png.flaticon.com/512/4492/4492311.png',
             },
@@ -69,6 +65,14 @@ const skillCategories = [
             {
                 name: 'Git',
                 icon: 'https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg',
+            },
+            {
+                name: 'GitHub',
+                icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg',
+            },
+            {
+                name: 'Bitbucket',
+                icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/bitbucket/bitbucket-original.svg',
             },
             {
                 name: 'Figma',
@@ -103,7 +107,7 @@ const AppleSkills = () => {
     return (
         <section id="skills" className="py-32 px-6 bg-gray-50">
             <div className="max-w-7xl mx-auto">
-                {/* Header */}
+
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -119,7 +123,6 @@ const AppleSkills = () => {
                     </h2>
                 </motion.div>
 
-                {/* Skills Grid - Minimal Luxury with Icons */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-300">
                     {skillCategories.map((category, idx) => (
                         <motion.div
@@ -158,7 +161,6 @@ const AppleSkills = () => {
                     ))}
                 </div>
 
-                {/* Soft Skills - Minimal */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
