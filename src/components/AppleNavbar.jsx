@@ -1,4 +1,4 @@
-import { motion } from "motion/react"
+import { motion } from 'motion/react'
 import { useEffect, useState } from 'react'
 
 const AppleNavbar = () => {
@@ -19,10 +19,11 @@ const AppleNavbar = () => {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-                ? 'bg-white/80 backdrop-blur-2xl border-b border-gray-200'
-                : 'bg-transparent'
-                }`}
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+                scrolled
+                    ? 'bg-white/80 backdrop-blur-2xl border-b border-gray-200'
+                    : 'bg-transparent'
+            }`}
         >
             <div className="max-w-7xl mx-auto px-6 py-6">
                 <div className="flex items-center justify-between">
@@ -43,7 +44,7 @@ const AppleNavbar = () => {
                             </a>
                         ))}
                         <a
-                            href="/resume/resume_chuthamat.pdf"
+                            href="/resume/resume_chuthamat_buaban.pdf"
                             download
                             className="text-xs font-medium tracking-[0.15em] uppercase bg-black text-white px-6 py-3 hover:bg-gray-900 transition-colors duration-300"
                         >

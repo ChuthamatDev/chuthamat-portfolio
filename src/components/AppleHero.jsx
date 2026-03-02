@@ -1,4 +1,4 @@
-import { motion } from "motion/react"
+import { motion } from 'motion/react'
 import { ArrowRight } from 'lucide-react'
 import TypewriterEffect from './common/TypewriterEffect'
 import SideExitAnimation from './common/SideExitAnimation'
@@ -35,7 +35,7 @@ const AppleHero = () => {
                     }}
                     className="text-6xl sm:text-7xl lg:text-8xl font-light tracking-tight text-gray-900 mb-8 leading-[0.95]"
                 >
-                    {Array.from("Engineering").map((char, index) => (
+                    {Array.from('Engineering').map((char, index) => (
                         <motion.span
                             key={index}
                             variants={{
@@ -49,7 +49,7 @@ const AppleHero = () => {
                     ))}
                     <br />
                     <span className="font-extralight italic">
-                        {Array.from("meets").map((char, index) => (
+                        {Array.from('meets').map((char, index) => (
                             <motion.span
                                 key={index}
                                 variants={{
@@ -71,7 +71,7 @@ const AppleHero = () => {
                         className="font-medium inline-block min-w-[4ch] text-left"
                     >
                         <TypewriterEffect
-                            words={["Design", "Innovation", "Future", "Scale"]}
+                            words={['Design', 'Innovation', 'Future', 'Scale']}
                             cursorClassName="bg-gray-900 h-10 sm:h-14 lg:h-20 mb-2 lg:mb-4 align-middle"
                         />
                     </motion.span>
@@ -100,7 +100,6 @@ const AppleHero = () => {
                     className="flex justify-center"
                 >
                     <div className="relative inline-flex items-center p-1.5 bg-white border border-gray-200 rounded-full shadow-2xl overflow-hidden">
-
                         {/* Primary Button (View Work) */}
                         <motion.a
                             href="#projects"
@@ -112,10 +111,10 @@ const AppleHero = () => {
                                     scale: 1,
                                     transition: {
                                         duration: 0.5,
-                                        ease: "easeOut",
-                                        delay: 0.2
-                                    }
-                                }
+                                        ease: 'easeOut',
+                                        delay: 0.2,
+                                    },
+                                },
                             }}
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
@@ -132,7 +131,7 @@ const AppleHero = () => {
                             className="flex items-center"
                         >
                             <a
-                                href="/resume/resume_chuthamat.pdf"
+                                href="/resume/resume_chuthamat_buaban.pdf"
                                 download
                                 className="relative z-10 flex items-center pr-8 pl-6 text-sm font-medium text-zinc-500 whitespace-nowrap hover:text-black transition-colors duration-300"
                             >
