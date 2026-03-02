@@ -1,5 +1,5 @@
-import { motion } from "motion/react"
-import { ArrowUpRight } from 'lucide-react';
+import { motion } from 'motion/react'
+import { ArrowUpRight } from 'lucide-react'
 
 const projects = [
     {
@@ -33,7 +33,7 @@ const projects = [
         id: 4,
         title: 'Task Board',
         category: 'Productivity Tool',
-        year: '2024',
+        year: '2026',
         tags: ['React', 'Kanban'],
         image: '/image/kanban.png',
         link: 'https://task-board-react-ivory.vercel.app/login',
@@ -42,12 +42,21 @@ const projects = [
         id: 5,
         title: 'Todo List',
         category: 'Web Application',
-        year: '2024',
+        year: '2026',
         tags: ['React'],
         image: '/image/todolist.png',
         link: 'https://todo-list-react-liart-three.vercel.app',
     },
-];
+    {
+        id: 6,
+        title: 'Plaimanas E-Commerce',
+        category: 'Technical Assessment',
+        year: '2026',
+        tags: ['Vanilla JS', 'CSS Grid', 'Optimization'],
+        image: '/image/plaimanas.png',
+        link: 'https://plaimanas-test-psi.vercel.app',
+    },
+]
 
 const BentoProjects = () => {
     return (
@@ -139,7 +148,11 @@ const BentoProjects = () => {
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                            transition={{
+                                duration: 0.8,
+                                delay: idx * 0.1,
+                                ease: [0.16, 1, 0.3, 1],
+                            }}
                             className="lg:col-span-4"
                         >
                             <a
@@ -198,7 +211,7 @@ const BentoProjects = () => {
                 </div>
             </div>
         </section>
-    );
-};
+    )
+}
 
-export default BentoProjects;
+export default BentoProjects
