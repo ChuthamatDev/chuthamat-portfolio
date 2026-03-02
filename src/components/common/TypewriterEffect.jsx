@@ -1,54 +1,51 @@
-
-import { motion } from "motion/react";
-import { useEffect, useState } from "react";
+﻿import { motion } from 'motion/react'
+import { useEffect, useState } from 'react'
 
 export const TypewriterEffect = ({
     words,
     className,
     cursorClassName,
 }) => {
-    const [currentWordIndex, setCurrentWordIndex] = useState(0);
-    const [text, setText] = useState("");
-    const [isDeleting, setIsDeleting] = useState(false);
+    const [currentWordIndex, setCurrentWordIndex] = useState(0)
+    const [text, setText] = useState('')
+    const [isDeleting, setIsDeleting] = useState(false)
 
     useEffect(() => {
-        const currentWord = words[currentWordIndex];
+        const currentWord = words[currentWordIndex]
+        const isWordComplete = text === currentWord
+        const isWordEmpty = text === ''
 
-        const typeSpeed = isDeleting ? 50 : 150;
-
-        if (!isDeleting && text === currentWord) {
-            // Pause at end of word
-            const timeout = setTimeout(() => {
-                setIsDeleting(true);
-            }, 1500);
-            return () => clearTimeout(timeout);
-        } else if (isDeleting && text === "") {
-            // End of delete, move to next word
-            setIsDeleting(false);
-            setCurrentWordIndex((prev) => (prev + 1) % words.length);
-            return;
-        }
+        const delay = !isDeleting && isWordComplete ? 1500 : isDeleting ? 50 : 150
 
         const timer = setTimeout(() => {
-            setText(prev => {
-                if (isDeleting) {
-                    return currentWord.substring(0, prev.length - 1);
-                } else {
-                    return currentWord.substring(0, prev.length + 1);
-                }
-            });
-        }, typeSpeed);
+            if (!isDeleting && isWordComplete) {
+                setIsDeleting(true)
+                return
+            }
 
-        return () => clearTimeout(timer);
-    }, [text, isDeleting, currentWordIndex, words]);
+            if (isDeleting && isWordEmpty) {
+                setIsDeleting(false)
+                setCurrentWordIndex((prev) => (prev + 1) % words.length)
+                return
+            }
+
+            setText((prev) =>
+                isDeleting
+                    ? currentWord.substring(0, prev.length - 1)
+                    : currentWord.substring(0, prev.length + 1)
+            )
+        }, delay)
+
+        return () => clearTimeout(timer)
+    }, [text, isDeleting, currentWordIndex, words])
 
     return (
         <span className={className}>
             {text}
             <Cursor className={cursorClassName} />
         </span>
-    );
-};
+    )
+}
 
 const Cursor = ({ className }) => {
     return (
@@ -58,11 +55,11 @@ const Cursor = ({ className }) => {
             transition={{
                 duration: 0.5,
                 repeat: Infinity,
-                repeatType: "reverse",
+                repeatType: 'reverse',
             }}
             className={`inline-block h-[1em] w-[2px] bg-black align-middle ml-1 ${className}`}
         />
-    );
-};
+    )
+}
 
-export default TypewriterEffect;
+export default TypewriterEffect
