@@ -9,7 +9,7 @@ const projects = [
         year: '2024',
         tags: ['React', 'JavaScript', 'Mui', 'Chart.js'],
         image: '/image/LoginPage __ Forgot password.png',
-        link: '#',
+        link: 'https://kumwellslms.com/login',
     },
     {
         id: 2,
