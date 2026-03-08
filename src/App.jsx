@@ -24,7 +24,7 @@ function App() {
                                 modern web technologies.
                             </p>
                         </div>
-                        <div className="flex gap-8">
+                        <div className="flex flex-wrap gap-4 sm:gap-8">
                             <a
                                 href="https://github.com/phraewchuthamat"
                                 target="_blank"

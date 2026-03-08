@@ -105,7 +105,7 @@ const skillCategories = [
 
 const AppleSkills = () => {
     return (
-        <section id="skills" className="py-32 px-6 bg-gray-50">
+        <section id="skills" className="py-20 md:py-32 px-4 md:px-6 bg-gray-50">
             <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -134,7 +134,7 @@ const AppleSkills = () => {
                                 delay: idx * 0.1,
                                 ease: [0.16, 1, 0.3, 1],
                             }}
-                            className="bg-white p-8 hover:bg-gray-50 transition-colors duration-300"
+                            className="bg-white p-6 md:p-8 hover:bg-gray-50 transition-colors duration-300"
                         >
                             <h3 className="text-xs font-medium tracking-[0.2em] uppercase text-gray-900 mb-6 border-b border-gray-200 pb-4">
                                 {category.title}
@@ -169,7 +169,7 @@ const AppleSkills = () => {
                         delay: 0.4,
                         ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="mt-20 bg-black text-white p-12 lg:p-16"
+                    className="mt-20 bg-black text-white p-8 md:p-12 lg:p-16"
                 >
                     <h3 className="text-xs font-medium tracking-[0.2em] uppercase mb-8 border-b border-white/20 pb-4">
                         Soft Skills

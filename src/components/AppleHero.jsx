@@ -5,7 +5,7 @@ import SideExitAnimation from './common/SideExitAnimation'
 
 const AppleHero = () => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center px-6 py-32 bg-white">
+        <section className="relative min-h-screen flex items-center justify-center px-4 md:px-6 py-24 md:py-32 bg-white">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30" />
 
             <div className="relative max-w-5xl mx-auto text-center z-10">
@@ -118,7 +118,7 @@ const AppleHero = () => {
                             }}
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            className="relative z-20 flex items-center gap-2 px-8 py-4 bg-zinc-900 text-white rounded-full font-medium text-sm tracking-wide shadow-lg"
+                            className="relative z-20 flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-zinc-900 text-white rounded-full font-medium text-sm tracking-wide shadow-lg"
                         >
                             VIEW WORK
                             <ArrowRight className="w-4 h-4 ml-1" />
@@ -133,7 +133,7 @@ const AppleHero = () => {
                             <a
                                 href="/resume/resume_chuthamat_buaban.pdf"
                                 download
-                                className="relative z-10 flex items-center pr-8 pl-6 text-sm font-medium text-zinc-500 whitespace-nowrap hover:text-black transition-colors duration-300"
+                                className="relative z-10 flex items-center px-4 pr-6 md:pl-6 md:pr-8 text-xs md:text-sm font-medium text-zinc-500 whitespace-nowrap hover:text-black transition-colors duration-300"
                             >
                                 DOWNLOAD RESUME
                             </a>
@@ -160,7 +160,7 @@ const AppleHero = () => {
                         delay: 1,
                         ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="grid grid-cols-3 gap-12 max-w-2xl mx-auto"
+                    className="grid grid-cols-3 gap-4 sm:gap-12 max-w-2xl mx-auto"
                 >
                     {[
                         { value: '5', label: 'Projects' },
