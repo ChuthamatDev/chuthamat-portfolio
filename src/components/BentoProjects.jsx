@@ -68,18 +68,18 @@ const BentoProjects = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="mb-20"
+                    className="mb-12 md:mb-16"
                 >
-                    <span className="text-xs font-medium tracking-[0.2em] uppercase text-gray-500 mb-4 block">
+                    <span className="text-xs font-medium tracking-[0.2em] uppercase text-zinc-500 mb-4 block">
                         Selected Work
                     </span>
-                    <h2 className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight text-gray-900">
+                    <h2 className="text-4xl sm:text-5xl font-light tracking-tight text-zinc-900">
                         Projects
                     </h2>
                 </motion.div>
 
                 {/* Luxury Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6">
                     {/* Featured Project - Large */}
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
@@ -92,7 +92,7 @@ const BentoProjects = () => {
                             href={projects[0].link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group block relative h-full min-h-[450px] md:min-h-[500px] lg:min-h-[600px] bg-gray-100 overflow-hidden"
+                            className="group block relative h-full min-h-[450px] md:min-h-[500px] lg:min-h-[600px] rounded-3xl overflow-hidden bg-zinc-100 border border-zinc-200/50"
                         >
                             {/* Image */}
                             <div className="absolute inset-0">
@@ -159,7 +159,7 @@ const BentoProjects = () => {
                                 href={project.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group block relative h-full min-h-[300px] md:min-h-[290px] bg-gray-100 overflow-hidden"
+                                className="group block relative h-full min-h-[300px] md:min-h-[290px] rounded-3xl overflow-hidden bg-zinc-100 border border-zinc-200/50"
                             >
                                 {/* Image */}
                                 <div className="absolute inset-0">

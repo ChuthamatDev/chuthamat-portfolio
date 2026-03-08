@@ -15,7 +15,7 @@ const AppleHero = () => {
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     className="inline-block mb-8"
                 >
-                    <span className="text-xs font-medium tracking-[0.2em] uppercase text-gray-500">
+                    <span className="text-xs font-semibold tracking-[0.15em] uppercase text-zinc-500">
                         Portfolio 2026
                     </span>
                 </motion.div>
@@ -33,7 +33,7 @@ const AppleHero = () => {
                             },
                         },
                     }}
-                    className="text-6xl sm:text-7xl lg:text-8xl font-light tracking-tight text-gray-900 mb-8 leading-[0.95]"
+                    className="text-6xl sm:text-7xl lg:text-8xl font-light tracking-tight text-zinc-900 mb-8 leading-[0.95]"
                 >
                     {Array.from('Engineering').map((char, index) => (
                         <motion.span
@@ -72,7 +72,7 @@ const AppleHero = () => {
                     >
                         <TypewriterEffect
                             words={['Design', 'Innovation', 'Future', 'Scale']}
-                            cursorClassName="bg-gray-900 h-10 sm:h-14 lg:h-20 mb-2 lg:mb-4 align-middle"
+                            cursorClassName="bg-zinc-900 h-10 sm:h-14 lg:h-20 mb-2 lg:mb-4 align-middle"
                         />
                     </motion.span>
                 </motion.h1>
@@ -85,7 +85,7 @@ const AppleHero = () => {
                         delay: 0.4,
                         ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="text-lg text-gray-500 max-w-2xl mx-auto mb-16 leading-relaxed font-light"
+                    className="text-lg text-zinc-500 max-w-2xl mx-auto mb-16 leading-relaxed font-light"
                 >
                     Chuthamat Buaban — Electrical Engineer turned Frontend
                     Developer,
@@ -99,7 +99,7 @@ const AppleHero = () => {
                     viewport={{ once: true }}
                     className="flex justify-center"
                 >
-                    <div className="relative inline-flex items-center p-1.5 bg-white border border-gray-200 rounded-full shadow-2xl overflow-hidden">
+                    <div className="relative inline-flex items-center p-1.5 bg-white border border-zinc-200/80 rounded-full shadow-lg overflow-hidden">
                         {/* Primary Button (View Work) */}
                         <motion.a
                             href="#projects"
@@ -149,7 +149,7 @@ const AppleHero = () => {
                         delay: 0.8,
                         ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="mt-24 mb-12 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"
+                    className="mt-24 mb-12 h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent"
                 />
 
                 <motion.div
@@ -168,10 +168,10 @@ const AppleHero = () => {
                         { value: '1Y+', label: 'Experience' },
                     ].map((stat, idx) => (
                         <div key={idx} className="text-center">
-                            <div className="text-4xl font-light text-gray-900 mb-2 tracking-tight">
+                            <div className="text-4xl font-light text-zinc-900 mb-2 tracking-tight">
                                 {stat.value}
                             </div>
-                            <div className="text-xs font-medium tracking-[0.15em] uppercase text-gray-500">
+                            <div className="text-xs font-semibold tracking-[0.15em] uppercase text-zinc-500">
                                 {stat.label}
                             </div>
                         </div>

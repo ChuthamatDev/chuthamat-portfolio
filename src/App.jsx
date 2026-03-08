@@ -1,5 +1,7 @@
 import AppleNavbar from './components/AppleNavbar'
 import AppleHero from './components/AppleHero'
+import GithubProfile from './components/GithubProfile'
+import FeaturedKanban from './components/FeaturedKanban'
 import BentoProjects from './components/BentoProjects'
 import AppleSkills from './components/AppleSkills'
 import './index.css'
@@ -9,6 +11,8 @@ function App() {
         <div className="min-h-screen bg-white">
             <AppleNavbar />
             <AppleHero />
+            <GithubProfile />
+            <FeaturedKanban />
             <BentoProjects />
             <AppleSkills />
 
