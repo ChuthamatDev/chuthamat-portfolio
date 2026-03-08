@@ -33,9 +33,12 @@ const FeaturedKanban = () => {
                     className="relative w-full rounded-3xl overflow-hidden bg-zinc-100 border border-zinc-200/80 shadow-sm mb-16 md:mb-20 group"
                 >
                     <div className="aspect-[16/9] w-full relative">
-                        <img
-                            src="/image/kanban.png"
-                            alt="Kanban Task Board Preview"
+                        <video
+                            src="/Recording_taskboard.mp4"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-end p-6 md:p-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">

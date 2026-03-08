@@ -35,7 +35,7 @@ const projects = [
         category: 'Productivity Tool',
         year: '2026',
         tags: ['React', 'Kanban'],
-        image: '/image/kanban.png',
+        image: '/Recording_taskboard.mp4',
         link: 'https://task-board-react-ivory.vercel.app/login',
     },
     {
@@ -94,13 +94,24 @@ const BentoProjects = () => {
                             rel="noopener noreferrer"
                             className="group block relative h-full min-h-[450px] md:min-h-[500px] lg:min-h-[600px] rounded-3xl overflow-hidden bg-zinc-100 border border-zinc-200/50"
                         >
-                            {/* Image */}
+                            {/* Image or Video */}
                             <div className="absolute inset-0">
-                                <img
-                                    src={projects[0].image}
-                                    alt={projects[0].title}
-                                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-                                />
+                                {projects[0].image.endsWith('.mp4') ? (
+                                    <video
+                                        src={projects[0].image}
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                                    />
+                                ) : (
+                                    <img
+                                        src={projects[0].image}
+                                        alt={projects[0].title}
+                                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                                    />
+                                )}
                                 <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-transparent group-hover:from-black/20 transition-all duration-700" />
                             </div>
 
@@ -161,13 +172,24 @@ const BentoProjects = () => {
                                 rel="noopener noreferrer"
                                 className="group block relative h-full min-h-[300px] md:min-h-[290px] rounded-3xl overflow-hidden bg-zinc-100 border border-zinc-200/50"
                             >
-                                {/* Image */}
+                                {/* Image or Video */}
                                 <div className="absolute inset-0">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-                                    />
+                                    {project.image.endsWith('.mp4') ? (
+                                        <video
+                                            src={project.image}
+                                            autoPlay
+                                            loop
+                                            muted
+                                            playsInline
+                                            className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                                        />
+                                    ) : (
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                                        />
+                                    )}
                                     <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-transparent group-hover:from-black/20 transition-all duration-700" />
                                 </div>
 
