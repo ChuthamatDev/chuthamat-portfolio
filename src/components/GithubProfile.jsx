@@ -63,7 +63,7 @@ const GithubProfile = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                        className="lg:col-span-4 sticky top-24"
+                        className="lg:col-span-4 lg:sticky lg:top-24"
                     >
                         <div className="bg-zinc-50/50 rounded-2xl p-6 md:p-8 border border-zinc-200/80 shadow-sm">
                             <div className="aspect-square w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 ring-1 ring-zinc-900/5 bg-white mx-auto lg:mx-0">

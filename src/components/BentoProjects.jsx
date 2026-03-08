@@ -92,7 +92,7 @@ const BentoProjects = () => {
                             href={projects[0].link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group block relative h-full min-h-[450px] md:min-h-[500px] lg:min-h-[600px] rounded-3xl overflow-hidden bg-zinc-100 border border-zinc-200/50"
+                            className="group block relative h-full min-h-[350px] md:min-h-[500px] lg:min-h-[600px] rounded-3xl overflow-hidden bg-zinc-100 border border-zinc-200/50"
                         >
                             {/* Image or Video */}
                             <div className="absolute inset-0">
@@ -132,7 +132,7 @@ const BentoProjects = () => {
                                     <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-4 tracking-tight">
                                         {projects[0].title}
                                     </h3>
-                                    <div className="flex items-end md:items-center justify-between gap-4">
+                                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                                         <div className="flex gap-2 flex-wrap">
                                             {projects[0].tags.map((tag) => (
                                                 <span
@@ -143,7 +143,7 @@ const BentoProjects = () => {
                                                 </span>
                                             ))}
                                         </div>
-                                        <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-300">
+                                        <div className="flex-shrink-0 mt-3 sm:mt-0 w-10 h-10 md:w-12 md:h-12 border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-300">
                                             <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 text-white group-hover:text-black transition-colors" />
                                         </div>
                                     </div>
@@ -170,7 +170,7 @@ const BentoProjects = () => {
                                 href={project.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group block relative h-full min-h-[300px] md:min-h-[290px] rounded-3xl overflow-hidden bg-zinc-100 border border-zinc-200/50"
+                                className="group block relative h-full min-h-[250px] md:min-h-[290px] rounded-3xl overflow-hidden bg-zinc-100 border border-zinc-200/50"
                             >
                                 {/* Image or Video */}
                                 <div className="absolute inset-0">
@@ -210,7 +210,7 @@ const BentoProjects = () => {
                                         <h3 className="text-xl md:text-2xl font-light text-white mb-3 tracking-tight">
                                             {project.title}
                                         </h3>
-                                        <div className="flex items-end justify-between gap-4">
+                                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                                             <div className="flex gap-2 flex-wrap">
                                                 {project.tags.map((tag) => (
                                                     <span
@@ -221,7 +221,7 @@ const BentoProjects = () => {
                                                     </span>
                                                 ))}
                                             </div>
-                                            <div className="w-8 h-8 md:w-10 md:h-10 border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-300 flex-shrink-0">
+                                            <div className="mt-3 sm:mt-0 w-8 h-8 md:w-10 md:h-10 border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-300 flex-shrink-0">
                                                 <ArrowUpRight className="w-3 h-3 md:w-4 md:h-4 text-white group-hover:text-black transition-colors" />
                                             </div>
                                         </div>
