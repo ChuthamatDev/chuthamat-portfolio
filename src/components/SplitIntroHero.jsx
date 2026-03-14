@@ -262,6 +262,16 @@ const SplitIntroHero = () => {
                     >
                         <a
                             href="#projects"
+                            onClick={(e) => {
+                                e.preventDefault()
+                                const el = document.getElementById('projects')
+                                if (el) {
+                                    window.scrollTo({
+                                        top: el.offsetTop - 80,
+                                        behavior: 'smooth'
+                                    })
+                                }
+                            }}
                             className="flex items-center gap-2 px-6 py-3 bg-white text-zinc-900 rounded-full text-xs font-semibold tracking-[0.15em] uppercase hover:bg-zinc-100 transition-colors duration-300"
                         >
                             View Work
@@ -370,6 +380,16 @@ const SplitIntroHero = () => {
                         <div className="flex items-center justify-between">
                             <a
                                 href="#projects"
+                                onClick={(e) => {
+                                    e.preventDefault()
+                                    const el = document.getElementById('projects')
+                                    if (el) {
+                                        window.scrollTo({
+                                            top: el.offsetTop - 80,
+                                            behavior: 'smooth'
+                                        })
+                                    }
+                                }}
                                 className="flex items-center gap-2 text-xs font-medium tracking-[0.15em] uppercase text-white hover:text-zinc-300 transition-colors"
                             >
                                 See my work <ArrowRight className="w-3.5 h-3.5" />
@@ -407,6 +427,16 @@ const SplitIntroHero = () => {
             >
                 <a
                     href="#projects"
+                    onClick={(e) => {
+                        e.preventDefault()
+                        const el = document.getElementById('projects')
+                        if (el) {
+                            window.scrollTo({
+                                top: el.offsetTop - 80,
+                                behavior: 'smooth'
+                            })
+                        }
+                    }}
                     className="flex items-center gap-2 px-5 py-2.5 bg-zinc-800 border border-zinc-700 rounded-full text-xs font-medium tracking-[0.12em] uppercase text-zinc-300 hover:bg-zinc-700 transition-colors"
                 >
                     View work <ArrowRight className="w-3 h-3" />

@@ -1,24 +1,44 @@
+import { lazy, Suspense } from 'react'
 import AppleNavbar from './components/AppleNavbar'
-// import AppleHero from './components/AppleHero'
-import SplitIntroHeros from './components/SplitIntroHero'
-import GithubProfile from './components/GithubProfile'
-import FeaturedKanban from './components/FeaturedKanban'
-import BentoProjects from './components/BentoProjects'
-import AppleSkills from './components/AppleSkills'
+import { HeroSkeleton, GithubSkeleton, KanbanSkeleton, BentoSkeleton, SkillsSkeleton } from './components/Skeletons'
 import './index.css'
+
+// ─── Dynamic Imports for Code Splitting (Senior Performance Pattern) ───
+// This defers loading chunks of JS until they are needed, drastically reducing initial load time to practically instant.
+const SplitIntroHeros = lazy(() => import('./components/SplitIntroHero'))
+const GithubProfile = lazy(() => import('./components/GithubProfile'))
+const FeaturedKanban = lazy(() => import('./components/FeaturedKanban'))
+const BentoProjects = lazy(() => import('./components/BentoProjects'))
+const AppleSkills = lazy(() => import('./components/AppleSkills'))
 
 function App() {
     return (
-        <div className="min-h-screen bg-zinc-950 text-zinc-300 selection:bg-emerald-500/30 selection:text-emerald-200">
+        <div className="min-h-[100dvh] bg-zinc-950 text-zinc-300 selection:bg-emerald-500/30 selection:text-emerald-200 overflow-x-hidden">
             <AppleNavbar />
-            {/* <AppleHero /> */}
-            <SplitIntroHeros />
-            <GithubProfile />
-            <FeaturedKanban />
-            <BentoProjects />
-            <AppleSkills />
+            
+            <main>
+                <Suspense fallback={<HeroSkeleton />}>
+                    <SplitIntroHeros />
+                </Suspense>
+                
+                <Suspense fallback={<GithubSkeleton />}>
+                    <GithubProfile />
+                </Suspense>
 
-            <footer className="bg-zinc-950 text-white py-16 px-6 border-t border-zinc-800/80">
+                <Suspense fallback={<KanbanSkeleton />}>
+                    <FeaturedKanban />
+                </Suspense>
+
+                <Suspense fallback={<BentoSkeleton />}>
+                    <BentoProjects />
+                </Suspense>
+
+                <Suspense fallback={<SkillsSkeleton />}>
+                    <AppleSkills />
+                </Suspense>
+            </main>
+
+            <footer id="contact" className="bg-zinc-950 text-white py-16 px-6 border-t border-zinc-800/80">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12 pb-12 border-b border-zinc-800/80">
                         <div>

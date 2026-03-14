@@ -1,18 +1,51 @@
 import { motion } from 'motion/react'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 
 const AppleNavbar = () => {
     const [scrolled, setScrolled] = useState(false)
 
+    // Using `requestAnimationFrame` ensures we only process scroll events at the native refresh rate (usually 60-120fps)
+    // This is an extremely performant alternative to standard debouncing.
     useEffect(() => {
+        let ticking = false
         const handleScroll = () => {
-            setScrolled(window.scrollY > 50)
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    setScrolled(window.scrollY > 50)
+                    ticking = false
+                })
+                ticking = true
+            }
         }
-        window.addEventListener('scroll', handleScroll)
+        
+        // Use passive listener to tell the browser this event won't cancel scroll, allowing native thread scrolling
+        window.addEventListener('scroll', handleScroll, { passive: true })
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
     const navItems = ['Projects', 'Skills', 'Contact']
+
+    // Intercepts typical anchor link jumps, calculating a specific pixel offset
+    // so the header doesn't overlap the top of sections (smooth continuous transitions without refresh)
+    const handleSmoothScroll = useCallback((e, targetId) => {
+        e.preventDefault()
+        if (targetId === '#') {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            return
+        }
+        
+        const element = document.getElementById(targetId)
+        if (element) {
+            const navHeight = 80 // offset the navbar
+            const elementPosition = element.getBoundingClientRect().top
+            const offsetPosition = elementPosition + window.scrollY - navHeight
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            })
+        }
+    }, [])
 
     return (
         <motion.nav
@@ -27,7 +60,11 @@ const AppleNavbar = () => {
         >
             <div className="max-w-7xl mx-auto px-6 py-6">
                 <div className="flex items-center justify-between">
-                    <a href="#" className="group">
+                    <a 
+                        href="#" 
+                        onClick={(e) => handleSmoothScroll(e, '#')} 
+                        className="group cursor-pointer"
+                    >
                         <span className="text-sm font-medium tracking-[0.15em] uppercase text-white">
                             Chuthamat
                         </span>
@@ -38,7 +75,8 @@ const AppleNavbar = () => {
                             <a
                                 key={item}
                                 href={`#${item.toLowerCase()}`}
-                                className="text-xs font-medium tracking-[0.15em] uppercase text-zinc-500 hover:text-white transition-colors duration-300"
+                                onClick={(e) => handleSmoothScroll(e, item.toLowerCase())}
+                                className="text-xs font-medium tracking-[0.15em] uppercase text-zinc-500 hover:text-white transition-colors duration-300 cursor-pointer"
                             >
                                 {item}
                             </a>
