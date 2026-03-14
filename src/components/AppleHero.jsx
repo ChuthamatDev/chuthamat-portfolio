@@ -5,8 +5,8 @@ import SideExitAnimation from './common/SideExitAnimation'
 
 const AppleHero = () => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center px-4 md:px-6 py-24 md:py-32 bg-white">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30" />
+        <section className="relative min-h-screen flex items-center justify-center px-4 md:px-6 py-24 md:py-32 bg-zinc-950">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none" />
 
             <div className="relative max-w-5xl mx-auto text-center z-10">
                 <motion.div
@@ -33,7 +33,7 @@ const AppleHero = () => {
                             },
                         },
                     }}
-                    className="text-6xl sm:text-7xl lg:text-8xl font-light tracking-tight text-zinc-900 mb-8 leading-[0.95]"
+                    className="text-6xl sm:text-7xl lg:text-8xl font-light tracking-tight text-white mb-8 leading-[0.95]"
                 >
                     {Array.from('Engineering').map((char, index) => (
                         <motion.span
@@ -72,7 +72,7 @@ const AppleHero = () => {
                     >
                         <TypewriterEffect
                             words={['Design', 'Innovation', 'Future', 'Scale']}
-                            cursorClassName="bg-zinc-900 h-10 sm:h-14 lg:h-20 mb-2 lg:mb-4 align-middle"
+                            cursorClassName="bg-white h-10 sm:h-14 lg:h-20 mb-2 lg:mb-4 align-middle"
                         />
                     </motion.span>
                 </motion.h1>
@@ -99,7 +99,7 @@ const AppleHero = () => {
                     viewport={{ once: true }}
                     className="flex justify-center"
                 >
-                    <div className="relative inline-flex items-center p-1.5 bg-white border border-zinc-200/80 rounded-full shadow-lg overflow-hidden">
+                    <div className="relative inline-flex items-center p-1.5 bg-zinc-900 border border-zinc-800 rounded-full shadow-lg overflow-hidden">
                         {/* Primary Button (View Work) */}
                         <motion.a
                             href="#projects"
@@ -118,7 +118,7 @@ const AppleHero = () => {
                             }}
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            className="relative z-20 flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-zinc-900 text-white rounded-full font-medium text-sm tracking-wide shadow-lg"
+                            className="relative z-20 flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-white text-zinc-900 rounded-full font-medium text-sm tracking-wide shadow-lg hover:bg-zinc-100 transition-colors"
                         >
                             VIEW WORK
                             <ArrowRight className="w-4 h-4 ml-1" />
@@ -133,7 +133,7 @@ const AppleHero = () => {
                             <a
                                 href="/resume/resume_chuthamat_buaban.pdf"
                                 download
-                                className="relative z-10 flex items-center px-4 pr-6 md:pl-6 md:pr-8 text-xs md:text-sm font-medium text-zinc-500 whitespace-nowrap hover:text-black transition-colors duration-300"
+                                className="relative z-10 flex items-center px-4 pr-6 md:pl-6 md:pr-8 text-xs md:text-sm font-medium text-zinc-400 whitespace-nowrap hover:text-white transition-colors duration-300"
                             >
                                 DOWNLOAD RESUME
                             </a>
@@ -149,7 +149,7 @@ const AppleHero = () => {
                         delay: 0.8,
                         ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="mt-24 mb-12 h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent"
+                    className="mt-24 mb-12 h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent"
                 />
 
                 <motion.div
@@ -168,7 +168,7 @@ const AppleHero = () => {
                         { value: '1Y+', label: 'Experience' },
                     ].map((stat, idx) => (
                         <div key={idx} className="text-center">
-                            <div className="text-4xl font-light text-zinc-900 mb-2 tracking-tight">
+                            <div className="text-4xl font-light text-white mb-2 tracking-tight">
                                 {stat.value}
                             </div>
                             <div className="text-xs font-semibold tracking-[0.15em] uppercase text-zinc-500">

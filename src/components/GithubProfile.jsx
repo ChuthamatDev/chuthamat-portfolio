@@ -38,8 +38,9 @@ const GithubProfile = () => {
     ]
 
     return (
-        <section id="github" className="py-20 md:py-32 px-4 md:px-6 bg-white border-t border-gray-100">
+        <section id="github" className="py-20 md:py-32 px-4 md:px-6 bg-zinc-950 border-t border-zinc-800/80">
             <div className="max-w-7xl mx-auto">
+                {/* Section Headings */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -47,155 +48,158 @@ const GithubProfile = () => {
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     className="mb-12 md:mb-16"
                 >
-                    <span className="text-xs font-medium tracking-[0.2em] uppercase text-zinc-500 mb-4 block">
-                        Developer Profile
+                    <span className="text-[10px] font-semibold tracking-[0.28em] uppercase text-zinc-500 mb-4 block">
+                        Command Center
                     </span>
-                    <h2 className="text-4xl sm:text-5xl font-light tracking-tight text-zinc-900 flex items-center gap-4">
-                        <Github className="w-8 h-8 md:w-10 md:h-10 text-zinc-800" />
-                        GitHub
+                    <h2 className="text-4xl sm:text-5xl font-light tracking-tight text-white flex items-center gap-4">
+                        <Github className="w-8 h-8 md:w-10 md:h-10 text-zinc-400" />
+                        Developer Profile
                     </h2>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
-                    {/* Profile Sidebar */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                        className="lg:col-span-4 lg:sticky lg:top-24"
-                    >
-                        <div className="bg-zinc-50/50 rounded-2xl p-6 md:p-8 border border-zinc-200/80 shadow-sm">
-                            <div className="aspect-square w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 ring-1 ring-zinc-900/5 bg-white mx-auto lg:mx-0">
-                                <img
-                                    src="/image/profile.png"
-                                    alt="ChuthamatDev Profile"
-                                    className="w-full h-full object-cover"
-                                    onError={(e) => {
-                                        e.target.src = 'https://github.com/ChuthamatDev.png' // Fallback to GitHub avatar
-                                    }}
-                                />
-                            </div>
-                            <h3 className="text-xl md:text-2xl font-medium text-zinc-900 mb-3 text-center lg:text-left">
+                {/* Top Bar (Header) */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                    className="flex flex-col lg:flex-row items-center justify-between bg-zinc-900/50 rounded-3xl p-6 md:p-8 lg:px-12 border border-zinc-800/80 shadow-sm mb-8 gap-6 lg:gap-8"
+                >
+                    <div className="flex flex-col sm:flex-row items-center text-center sm:text-left gap-6 lg:gap-8 w-full lg:w-auto">
+                        <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden ring-1 ring-zinc-700 flex-shrink-0">
+                            <img
+                                src="/image/profile.png"
+                                alt="ChuthamatDev Profile"
+                                className="w-full h-full object-cover"
+                                onError={(e) => {
+                                    e.target.src = 'https://github.com/ChuthamatDev.png' // Fallback to GitHub avatar
+                                }}
+                            />
+                        </div>
+                        <div>
+                            <h3 className="text-2xl md:text-3xl font-light text-white mb-3">
                                 Chuthamat Buaban
                             </h3>
-
-                            <div className="space-y-3 mt-6 border-t border-zinc-200/60 pt-6">
-                                <div className="flex items-center gap-3 text-zinc-600">
-                                    <Coffee className="w-4 h-4 text-zinc-400" />
-                                    <span className="text-sm font-light">"I like code and coffee."</span>
+                            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-zinc-400 text-sm">
+                                <div className="flex items-center gap-2">
+                                    <MapPin className="w-4 h-4 text-zinc-500" />
+                                    <span className="font-light tracking-wide">Ubon Ratchathani</span>
                                 </div>
-                                <div className="flex items-center gap-3 text-zinc-600">
-                                    <MapPin className="w-4 h-4 text-zinc-400" />
-                                    <span className="text-sm font-light">Ubon Ratchathani, Thailand</span>
-                                </div>
-                                <div className="flex items-center gap-3 text-zinc-600">
-                                    <LinkIcon className="w-4 h-4 text-zinc-400" />
-                                    <a
-                                        href="https://dinq.me/chuthamat"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-sm font-light hover:text-indigo-600 transition-colors"
-                                    >
-                                        dinq.me/chuthamat
-                                    </a>
-                                </div>
-                                <div className="flex items-center gap-3 text-zinc-600">
-                                    <BookOpen className="w-4 h-4 text-zinc-400" />
-                                    <span className="text-sm font-light"><strong>16</strong> Repositories</span>
+                                <div className="hidden sm:flex items-center gap-2">
+                                    <Coffee className="w-4 h-4 text-zinc-500" />
+                                    <span className="font-light tracking-wide">Code & Coffee</span>
                                 </div>
                             </div>
-
-                            <a
-                                href="https://github.com/ChuthamatDev"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="mt-8 w-full flex justify-center items-center py-2.5 bg-zinc-900 text-white rounded-lg text-sm font-medium hover:bg-zinc-800 transition-colors shadow-sm"
-                            >
-                                View GitHub Profile
-                            </a>
                         </div>
-                    </motion.div>
+                    </div>
 
-                    {/* Pinned Repos */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                        className="lg:col-span-8 flex flex-col"
-                    >
-                        <h4 className="text-lg font-medium text-zinc-900 mb-6 flex items-center gap-2">
-                            <Star className="w-5 h-5 text-amber-400" /> Pinned Projects
-                        </h4>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            {pinnedRepos.map((repo, idx) => (
-                                <motion.a
-                                    key={repo.name}
-                                    href={`https://github.com/ChuthamatDev/${repo.name}`}
+                    <div className="flex flex-col sm:flex-row items-center gap-8 border-t lg:border-t-0 border-zinc-800/80 pt-6 lg:pt-0 w-full lg:w-auto justify-center lg:justify-end">
+                        <div className="flex gap-8 text-center shrink-0">
+                            <div>
+                                <div className="text-2xl font-light text-white mb-1">16</div>
+                                <div className="text-[10px] font-semibold tracking-[0.15em] uppercase text-zinc-500">Repos</div>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <LinkIcon className="w-5 h-5 text-emerald-500 mb-2" />
+                                <a
+                                    href="https://dinq.me/chuthamat"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    initial={{ opacity: 0, scale: 0.98 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.4, delay: 0.05 * idx }}
-                                    className="group flex flex-col p-6 bg-white border border-zinc-200/80 rounded-2xl hover:border-zinc-300 hover:shadow-sm transition-all"
+                                    className="text-[10px] font-semibold tracking-[0.15em] uppercase text-zinc-400 hover:text-white transition-colors"
                                 >
-                                    <div className="flex justify-between items-start mb-3">
-                                        <div className="flex items-center gap-2 text-indigo-600 font-medium text-sm group-hover:text-indigo-700 transition-colors">
-                                            <BookOpen className="w-4 h-4" />
-                                            <span>{repo.name}</span>
-                                        </div>
+                                    Website
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <a
+                            href="https://github.com/ChuthamatDev"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full sm:w-auto flex justify-center items-center px-6 py-3.5 bg-white text-zinc-900 rounded-full text-[10px] font-semibold tracking-[0.15em] uppercase hover:bg-zinc-200 transition-colors shadow-sm whitespace-nowrap"
+                        >
+                            View GitHub
+                        </a>
+                    </div>
+                </motion.div>
+
+                {/* Middle Section (The Graph) */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                    className="bg-zinc-900/50 border border-zinc-800/80 rounded-3xl p-6 md:p-10 shadow-sm mb-12 overflow-hidden"
+                >
+                    <h4 className="text-lg font-light text-white mb-8 flex items-center justify-center lg:justify-start gap-3">
+                        <Star className="w-4 h-4 text-emerald-500" /> Contributions Map
+                    </h4>
+                    <div className="overflow-x-auto pb-2 custom-scrollbar flex justify-center lg:justify-start">
+                        <div className="min-w-[700px] flex justify-center w-full">
+                            <img
+                                src="https://ghchart.rshah.org/ChuthamatDev"
+                                alt="ChuthamatDev's Github chart"
+                                className="max-w-full opacity-90 sepia-[.2] hue-rotate-[-10deg] saturate-150"
+                            />
+                        </div>
+                    </div>
+                </motion.div>
+
+                {/* Bottom Section (The Repos) */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                >
+                    <h4 className="text-lg font-light text-white mb-6 flex items-center gap-3 px-2">
+                        <BookOpen className="w-4 h-4 text-emerald-500" /> Key Repositories
+                    </h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                        {pinnedRepos.map((repo, idx) => (
+                            <motion.a
+                                key={repo.name}
+                                href={`https://github.com/ChuthamatDev/${repo.name}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: 0.1 * idx }}
+                                className="group flex flex-col p-6 bg-zinc-900/50 border border-zinc-800/80 rounded-3xl hover:border-zinc-700 hover:bg-zinc-800/50 transition-all h-full"
+                            >
+                                <div className="flex items-center gap-2.5 text-emerald-400 font-medium text-sm group-hover:text-emerald-300 transition-colors mb-4 line-clamp-1 break-all">
+                                    <BookOpen className="w-4 h-4 flex-shrink-0" />
+                                    <span className="truncate">{repo.name}</span>
+                                </div>
+                                <p className="text-sm font-light text-zinc-400 mb-8 flex-grow line-clamp-3 leading-relaxed">
+                                    {repo.description}
+                                </p>
+                                <div className="flex justify-between items-center text-xs text-zinc-500 font-medium mt-auto pt-5 border-t border-zinc-800/80">
+                                    <div className="flex items-center gap-2">
+                                        <span
+                                            className="w-2.5 h-2.5 rounded-full ring-2 ring-zinc-900"
+                                            style={{ backgroundColor: repo.languageColor }}
+                                        />
+                                        <span className="tracking-wide">{repo.language}</span>
                                     </div>
-                                    <p className="text-sm font-light text-zinc-600 mb-6 flex-grow line-clamp-2 leading-relaxed">
-                                        {repo.description}
-                                    </p>
-                                    <div className="flex items-center gap-5 text-xs text-zinc-500 font-medium">
-                                        <div className="flex items-center gap-1.5">
-                                            <span
-                                                className="w-2.5 h-2.5 rounded-full"
-                                                style={{ backgroundColor: repo.languageColor }}
-                                            />
-                                            {repo.language}
-                                        </div>
+                                    <div className="flex gap-4">
                                         {repo.stars > 0 && (
-                                            <div className="flex items-center gap-1 hover:text-zinc-700 transition-colors">
+                                            <div className="flex items-center gap-1.5 hover:text-white transition-colors">
                                                 <Star className="w-3.5 h-3.5" /> {repo.stars}
                                             </div>
                                         )}
                                         {repo.forks > 0 && (
-                                            <div className="flex items-center gap-1 hover:text-zinc-700 transition-colors">
+                                            <div className="flex items-center gap-1.5 hover:text-white transition-colors">
                                                 <GitFork className="w-3.5 h-3.5" /> {repo.forks}
                                             </div>
                                         )}
                                     </div>
-                                </motion.a>
-                            ))}
-                        </div>
-
-                        {/* Contributions Graph */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                            className="mt-4 bg-white border border-zinc-200/80 rounded-2xl p-6 shadow-sm overflow-hidden"
-                        >
-                            <h4 className="text-lg font-medium text-zinc-900 mb-6 flex items-center gap-2">
-                                <Github className="w-5 h-5 text-zinc-700" /> Contributions Map
-                            </h4>
-                            <div className="overflow-x-auto pb-2 custom-scrollbar -mx-2 px-2">
-                                <div className="min-w-[700px] flex justify-center">
-                                    <img
-                                        src="https://ghchart.rshah.org/ChuthamatDev"
-                                        alt="ChuthamatDev's Github chart"
-                                        className="max-w-full opacity-90 sepia-[.2] hue-rotate-[-10deg] saturate-150"
-                                    />
                                 </div>
-                            </div>
-                        </motion.div>
-                    </motion.div>
-                </div>
+                            </motion.a>
+                        ))}
+                    </div>
+                </motion.div>
             </div>
         </section>
     )

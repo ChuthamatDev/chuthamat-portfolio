@@ -21,14 +21,14 @@ const AppleNavbar = () => {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
                 scrolled
-                    ? 'bg-white/80 backdrop-blur-2xl border-b border-gray-200'
+                    ? 'bg-zinc-950/80 backdrop-blur-2xl border-b border-zinc-800'
                     : 'bg-transparent'
             }`}
         >
             <div className="max-w-7xl mx-auto px-6 py-6">
                 <div className="flex items-center justify-between">
                     <a href="#" className="group">
-                        <span className="text-sm font-medium tracking-[0.15em] uppercase text-gray-900">
+                        <span className="text-sm font-medium tracking-[0.15em] uppercase text-white">
                             Chuthamat
                         </span>
                     </a>
@@ -38,7 +38,7 @@ const AppleNavbar = () => {
                             <a
                                 key={item}
                                 href={`#${item.toLowerCase()}`}
-                                className="text-xs font-medium tracking-[0.15em] uppercase text-gray-600 hover:text-gray-900 transition-colors duration-300"
+                                className="text-xs font-medium tracking-[0.15em] uppercase text-zinc-500 hover:text-white transition-colors duration-300"
                             >
                                 {item}
                             </a>
@@ -46,13 +46,13 @@ const AppleNavbar = () => {
                         <a
                             href="/resume/resume_chuthamat_buaban.pdf"
                             download
-                            className="text-xs font-medium tracking-[0.15em] uppercase bg-black text-white px-6 py-3 hover:bg-gray-900 transition-colors duration-300"
+                            className="text-[10px] font-semibold tracking-[0.15em] uppercase bg-white text-zinc-900 rounded-full px-6 py-2.5 hover:bg-zinc-200 transition-colors duration-300"
                         >
                             Resume
                         </a>
                     </div>
 
-                    <button className="md:hidden text-xs font-medium tracking-[0.15em] uppercase text-gray-900">
+                    <button className="md:hidden text-[10px] font-semibold tracking-[0.15em] uppercase text-zinc-300">
                         Menu
                     </button>
                 </div>

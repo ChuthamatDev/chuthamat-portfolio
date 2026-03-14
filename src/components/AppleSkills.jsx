@@ -105,7 +105,7 @@ const skillCategories = [
 
 const AppleSkills = () => {
     return (
-        <section id="skills" className="py-20 md:py-32 px-4 md:px-6 bg-white">
+        <section id="skills" className="py-20 md:py-32 px-4 md:px-6 bg-zinc-950">
             <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -114,16 +114,16 @@ const AppleSkills = () => {
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     className="mb-12 md:mb-16"
                 >
-                    <span className="text-xs font-medium tracking-[0.2em] uppercase text-zinc-500 mb-4 block">
+                    <span className="text-[10px] font-semibold tracking-[0.28em] uppercase text-zinc-500 mb-4 block">
                         Expertise
                     </span>
-                    <h2 className="text-4xl sm:text-5xl font-light tracking-tight text-zinc-900">
+                    <h2 className="text-4xl sm:text-5xl font-light tracking-tight text-white/90">
                         Skills
                     </h2>
                 </motion.div>
 
-                <div className="rounded-3xl overflow-hidden border border-zinc-200/50 shadow-sm">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-zinc-200">
+                <div className="rounded-3xl overflow-hidden border border-zinc-800/80 shadow-sm bg-zinc-950">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-zinc-800/80">
                         {skillCategories.map((category, idx) => (
                             <motion.div
                                 key={category.title}
@@ -135,9 +135,9 @@ const AppleSkills = () => {
                                     delay: idx * 0.1,
                                     ease: [0.16, 1, 0.3, 1],
                                 }}
-                                className="bg-zinc-50/50 p-6 md:p-8 hover:bg-white transition-colors duration-300"
+                                className="bg-zinc-950 p-6 md:p-8 hover:bg-zinc-900/50 transition-colors duration-300"
                             >
-                                <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-zinc-900 mb-6 border-b border-zinc-200/80 pb-4">
+                                <h3 className="text-[10px] font-semibold tracking-[0.15em] uppercase text-white/90 mb-6 border-b border-zinc-800/80 pb-4">
                                     {category.title}
                                 </h3>
                                 <ul className="space-y-4">
@@ -151,7 +151,7 @@ const AppleSkills = () => {
                                                 alt={skill.name}
                                                 className="w-5 h-5 object-contain group-hover:scale-110 transition-transform duration-300 opacity-80 group-hover:opacity-100"
                                             />
-                                            <span className="text-sm font-light text-zinc-600 tracking-wide group-hover:text-zinc-900 transition-colors">
+                                            <span className="text-sm font-light text-zinc-400 tracking-wide group-hover:text-white transition-colors">
                                                 {skill.name}
                                             </span>
                                         </li>
@@ -171,9 +171,9 @@ const AppleSkills = () => {
                         delay: 0.4,
                         ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="mt-12 md:mt-16 bg-zinc-900 text-white p-8 md:p-12 lg:p-16 rounded-3xl shadow-sm"
+                    className="mt-12 md:mt-16 bg-zinc-900/50 border border-zinc-800/80 text-white p-8 md:p-12 lg:p-16 rounded-3xl shadow-sm"
                 >
-                    <h3 className="text-xs font-semibold tracking-[0.15em] uppercase mb-8 border-b border-white/10 pb-4 text-zinc-300">
+                    <h3 className="text-[10px] font-semibold tracking-[0.15em] uppercase mb-8 border-b border-zinc-800/80 pb-4 text-zinc-400">
                         Soft Skills
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

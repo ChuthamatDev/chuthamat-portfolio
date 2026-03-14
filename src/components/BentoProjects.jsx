@@ -60,7 +60,7 @@ const projects = [
 
 const BentoProjects = () => {
     return (
-        <section id="projects" className="py-20 md:py-32 px-4 md:px-6 bg-white">
+        <section id="projects" className="py-20 md:py-32 px-4 md:px-6 bg-zinc-950">
             <div className="max-w-7xl mx-auto">
                 {/* Header - Luxury Minimal */}
                 <motion.div
@@ -70,10 +70,10 @@ const BentoProjects = () => {
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     className="mb-12 md:mb-16"
                 >
-                    <span className="text-xs font-medium tracking-[0.2em] uppercase text-zinc-500 mb-4 block">
+                    <span className="text-[10px] font-semibold tracking-[0.28em] uppercase text-zinc-500 mb-4 block">
                         Selected Work
                     </span>
-                    <h2 className="text-4xl sm:text-5xl font-light tracking-tight text-zinc-900">
+                    <h2 className="text-4xl sm:text-5xl font-light tracking-tight text-white/90">
                         Projects
                     </h2>
                 </motion.div>
@@ -92,7 +92,7 @@ const BentoProjects = () => {
                             href={projects[0].link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group block relative h-full min-h-[350px] md:min-h-[500px] lg:min-h-[600px] rounded-3xl overflow-hidden bg-zinc-100 border border-zinc-200/50"
+                            className="group block relative h-full min-h-[350px] md:min-h-[500px] lg:min-h-[600px] rounded-3xl overflow-hidden bg-zinc-900/50 border border-zinc-800/80"
                         >
                             {/* Image or Video */}
                             <div className="absolute inset-0">
@@ -170,7 +170,7 @@ const BentoProjects = () => {
                                 href={project.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group block relative h-full min-h-[250px] md:min-h-[290px] rounded-3xl overflow-hidden bg-zinc-100 border border-zinc-200/50"
+                                className="group block relative h-full min-h-[250px] md:min-h-[290px] rounded-3xl overflow-hidden bg-zinc-900/50 border border-zinc-800/80"
                             >
                                 {/* Image or Video */}
                                 <div className="absolute inset-0">
